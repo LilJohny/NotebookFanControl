@@ -1,0 +1,17 @@
+/home/denis/Documents/Programming/nbfc/Core/NbfcService/obj/ReleaseLinux/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/denis/Documents/Programming/nbfc/Core/NbfcService/obj/ReleaseLinux/NbfcService.NoteBookFanControlService.resources
+/home/denis/Documents/Programming/nbfc/Core/NbfcService/bin/ReleaseLinux/NbfcService.exe.config
+/home/denis/Documents/Programming/nbfc/Core/NbfcService/bin/ReleaseLinux/NbfcService.exe
+/home/denis/Documents/Programming/nbfc/Core/NbfcService/obj/ReleaseLinux/NbfcService.exe
+/home/denis/Documents/Programming/nbfc/Core/NbfcService/bin/ReleaseLinux/NLog.dll
+/home/denis/Documents/Programming/nbfc/Core/NbfcService/bin/ReleaseLinux/StagWare.FanControl.Service.dll
+/home/denis/Documents/Programming/nbfc/Core/NbfcService/bin/ReleaseLinux/StagWare.FanControl.Service.pdb
+/home/denis/Documents/Programming/nbfc/Core/NbfcService/bin/ReleaseLinux/StagWare.Settings.dll
+/home/denis/Documents/Programming/nbfc/Core/NbfcService/bin/ReleaseLinux/StagWare.Settings.pdb
+/home/denis/Documents/Programming/nbfc/Core/NbfcService/bin/ReleaseLinux/StagWare.FanControl.dll
+/home/denis/Documents/Programming/nbfc/Core/NbfcService/bin/ReleaseLinux/StagWare.FanControl.pdb
+/home/denis/Documents/Programming/nbfc/Core/NbfcService/bin/ReleaseLinux/StagWare.FanControl.Configurations.dll
+/home/denis/Documents/Programming/nbfc/Core/NbfcService/bin/ReleaseLinux/StagWare.FanControl.Configurations.pdb
+/home/denis/Documents/Programming/nbfc/Core/NbfcService/bin/ReleaseLinux/System.IO.Abstractions.dll
+/home/denis/Documents/Programming/nbfc/Core/NbfcService/bin/ReleaseLinux/StagWare.BiosInfo.dll
+/home/denis/Documents/Programming/nbfc/Core/NbfcService/bin/ReleaseLinux/StagWare.BiosInfo.pdb

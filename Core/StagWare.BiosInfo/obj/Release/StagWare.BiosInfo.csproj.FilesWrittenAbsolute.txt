@@ -1,0 +1,5 @@
+/home/denis/Documents/Programming/nbfc/Core/StagWare.BiosInfo/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/denis/Documents/Programming/nbfc/Core/StagWare.BiosInfo/bin/Release/StagWare.BiosInfo.pdb
+/home/denis/Documents/Programming/nbfc/Core/StagWare.BiosInfo/bin/Release/StagWare.BiosInfo.dll
+/home/denis/Documents/Programming/nbfc/Core/StagWare.BiosInfo/obj/Release/StagWare.BiosInfo.dll
+/home/denis/Documents/Programming/nbfc/Core/StagWare.BiosInfo/obj/Release/StagWare.BiosInfo.pdb

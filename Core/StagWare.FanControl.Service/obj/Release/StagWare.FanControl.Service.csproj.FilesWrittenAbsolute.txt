@@ -1,0 +1,16 @@
+/home/denis/Documents/Programming/nbfc/Core/StagWare.FanControl.Service/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/denis/Documents/Programming/nbfc/Core/StagWare.FanControl.Service/bin/Release/StagWare.FanControl.Service.dll.config
+/home/denis/Documents/Programming/nbfc/Core/StagWare.FanControl.Service/bin/Release/StagWare.FanControl.Service.pdb
+/home/denis/Documents/Programming/nbfc/Core/StagWare.FanControl.Service/bin/Release/StagWare.FanControl.Service.dll
+/home/denis/Documents/Programming/nbfc/Core/StagWare.FanControl.Service/obj/Release/StagWare.FanControl.Service.dll
+/home/denis/Documents/Programming/nbfc/Core/StagWare.FanControl.Service/obj/Release/StagWare.FanControl.Service.pdb
+/home/denis/Documents/Programming/nbfc/Core/StagWare.FanControl.Service/bin/Release/NLog.dll
+/home/denis/Documents/Programming/nbfc/Core/StagWare.FanControl.Service/bin/Release/StagWare.FanControl.Configurations.dll
+/home/denis/Documents/Programming/nbfc/Core/StagWare.FanControl.Service/bin/Release/StagWare.FanControl.Configurations.pdb
+/home/denis/Documents/Programming/nbfc/Core/StagWare.FanControl.Service/bin/Release/StagWare.FanControl.dll
+/home/denis/Documents/Programming/nbfc/Core/StagWare.FanControl.Service/bin/Release/StagWare.FanControl.pdb
+/home/denis/Documents/Programming/nbfc/Core/StagWare.FanControl.Service/bin/Release/StagWare.Settings.dll
+/home/denis/Documents/Programming/nbfc/Core/StagWare.FanControl.Service/bin/Release/StagWare.Settings.pdb
+/home/denis/Documents/Programming/nbfc/Core/StagWare.FanControl.Service/bin/Release/System.IO.Abstractions.dll
+/home/denis/Documents/Programming/nbfc/Core/StagWare.FanControl.Service/bin/Release/StagWare.BiosInfo.dll
+/home/denis/Documents/Programming/nbfc/Core/StagWare.FanControl.Service/bin/Release/StagWare.BiosInfo.pdb

@@ -1,0 +1,7 @@
+/home/denis/Documents/Programming/nbfc/Core/NbfcCli/obj/ReleaseLinux/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/denis/Documents/Programming/nbfc/Core/NbfcCli/bin/ReleaseLinux/nbfc.exe.config
+/home/denis/Documents/Programming/nbfc/Core/NbfcCli/bin/ReleaseLinux/nbfc.pdb
+/home/denis/Documents/Programming/nbfc/Core/NbfcCli/bin/ReleaseLinux/nbfc.exe
+/home/denis/Documents/Programming/nbfc/Core/NbfcCli/obj/ReleaseLinux/nbfc.exe
+/home/denis/Documents/Programming/nbfc/Core/NbfcCli/obj/ReleaseLinux/nbfc.pdb
+/home/denis/Documents/Programming/nbfc/Core/NbfcCli/bin/ReleaseLinux/clipr.dll

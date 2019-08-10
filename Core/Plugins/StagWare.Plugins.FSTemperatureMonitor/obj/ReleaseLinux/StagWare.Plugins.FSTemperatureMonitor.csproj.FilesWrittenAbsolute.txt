@@ -1,0 +1,13 @@
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.FSTemperatureMonitor/obj/ReleaseLinux/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.FSTemperatureMonitor/bin/Release/StagWare.Plugins.FSTemperatureMonitor.pdb
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.FSTemperatureMonitor/bin/Release/StagWare.Plugins.FSTemperatureMonitor.dll
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.FSTemperatureMonitor/obj/ReleaseLinux/StagWare.Plugins.FSTemperatureMonitor.dll
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.FSTemperatureMonitor/obj/ReleaseLinux/StagWare.Plugins.FSTemperatureMonitor.pdb
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.FSTemperatureMonitor/bin/Release/StagWare.FanControl.dll
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.FSTemperatureMonitor/bin/Release/StagWare.FanControl.pdb
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.FSTemperatureMonitor/bin/Release/NLog.dll
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.FSTemperatureMonitor/bin/Release/StagWare.FanControl.Configurations.dll
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.FSTemperatureMonitor/bin/Release/StagWare.FanControl.Configurations.pdb
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.FSTemperatureMonitor/bin/Release/System.IO.Abstractions.dll
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.FSTemperatureMonitor/bin/Release/StagWare.BiosInfo.dll
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.FSTemperatureMonitor/bin/Release/StagWare.BiosInfo.pdb

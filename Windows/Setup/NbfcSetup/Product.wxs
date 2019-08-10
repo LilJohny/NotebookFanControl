@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+
+  <!--Includes-->
+  <?include $(var.ProjectDir)Constants.wxi ?>
+
+  <Product Id="*" Name="$(var.ProductName)" 
+           Version="!(bind.fileVersion.NbfcService.exe)" 
+           Language="1033" 
+           Codepage="1252"
+           Manufacturer="$(var.Manufacturer)"  
+           UpgradeCode="$(var.UpgradeGuid)">
+
+    <!--Package-->
+    <Package InstallerVersion="300" 
+             Compressed="yes"  
+             Id="*" 
+             InstallScope="perMachine"
+             Manufacturer="$(var.Manufacturer)" 
+             Description="$(var.ProductName) Installer"/>
+
+    <!--Upgrade-->
+    <MajorUpgrade Schedule="afterInstallInitialize"
+                  AllowDowngrades="no"
+                  AllowSameVersionUpgrades="no"
+                  DowngradeErrorMessage="A newer version of $(var.ProductName) is already installed." />
+
+    <!--Media-->
+    <Media Id="1" Cabinet="NBFC.cab" EmbedCab="yes" CompressionLevel="high"/>
+    
+    <!--Replace advertised shortcuts with normal ones-->
+    <Property Id="DISABLEADVTSHORTCUTS" Value="1" />
+
+    <!--.NET Framework check-->
+    <PropertyRef Id="NETFRAMEWORK45"/>
+
+    <Condition Message="$(var.ProductName) requires .NET Framework 4.5 or greater.">
+      <![CDATA[NETFRAMEWORK45]]>
+    </Condition>
+
+    <!--Program Icon-->
+    <Icon Id="fan.ico" SourceFile="$(var.NbfcClient.ProjectDir)fan.ico" />
+    <Property Id="ARPPRODUCTICON" Value="fan.ico" />
+
+    <!--DriverSetupAction-->
+    <Binary Id="DriverSetupWixAction.CA.dll" 
+            SourceFile="$(var.DriverSetupWixAction.TargetDir)DriverSetupWixAction.CA.dll"/>
+    <CustomAction Id="InstallDriver" 
+                  BinaryKey="DriverSetupWixAction.CA.dll" 
+                  DllEntry="InstallDriver" 
+                  Execute="deferred"
+                  Impersonate="no" 
+                  Return="check" 
+                  HideTarget="no" 
+                  TerminalServerAware="no"/>
+    
+    <CustomAction Id="UninstallDriver" 
+                  BinaryKey="DriverSetupWixAction.CA.dll" 
+                  DllEntry="UninstallDriver" 
+                  Execute="deferred"
+                  Impersonate="no" 
+                  Return="ignore" 
+                  HideTarget="no" 
+                  TerminalServerAware="no"/>
+
+    <!--Set custom action properties-->
+    <CustomAction Id="SetInstallFolderForInstallDriver" 
+                  Property="InstallDriver" 
+                  Value="INSTALLFOLDER=[INSTALLFOLDER]"
+                  Return="check" 
+                  Execute="immediate"/>
+    
+    <CustomAction Id="SetInstallFolderForUninstallDriver" 
+                  Property="UninstallDriver" 
+                  Value="INSTALLFOLDER=[INSTALLFOLDER]"
+                  Return="check" 
+                  Execute="immediate"/>
+    
+    <!--Close NbfcClient before installation-->
+    <util:CloseApplication Id="CloseNbfcClient" Target="NoteBookFanControl.exe" EndSessionMessage="yes" />
+    <util:CloseApplication Id="CloseNbfcClientOld" Target="NoteBook FanControl.exe" EndSessionMessage="yes" />
+
+    <!--Do actions-->
+    <InstallExecuteSequence>      
+      <Custom Action="SetInstallFolderForUninstallDriver" Before="UninstallDriver"/>
+      <Custom Action="UninstallDriver" After="DeleteServices"/>
+
+      <Custom Action="SetInstallFolderForInstallDriver" Before ="InstallDriver"/>
+      <Custom Action="InstallDriver" After="InstallFiles">
+        NOT REMOVE="ALL"
+      </Custom>
+    </InstallExecuteSequence>
+
+    <!--Features-->
+    <Feature Id="NoteBookFanControl" Title="$(var.ProductName)" Level="1">
+      <ComponentGroupRef Id="Application" />
+      <ComponentGroupRef Id="Plugins" />
+      <ComponentGroupRef Id="Configs" />
+      <ComponentGroupRef Id="Directories" />
+    </Feature>
+  </Product>
+</Wix>

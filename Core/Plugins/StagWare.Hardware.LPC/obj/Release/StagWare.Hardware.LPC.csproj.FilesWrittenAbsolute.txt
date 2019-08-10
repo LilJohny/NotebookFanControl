@@ -1,0 +1,5 @@
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Hardware.LPC/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Hardware.LPC/bin/Release/StagWare.Hardware.LPC.pdb
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Hardware.LPC/bin/Release/StagWare.Hardware.LPC.dll
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Hardware.LPC/obj/Release/StagWare.Hardware.LPC.dll
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Hardware.LPC/obj/Release/StagWare.Hardware.LPC.pdb

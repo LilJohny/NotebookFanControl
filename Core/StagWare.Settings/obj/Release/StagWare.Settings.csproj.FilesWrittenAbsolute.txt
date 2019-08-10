@@ -1,0 +1,5 @@
+/home/denis/Documents/Programming/nbfc/Core/StagWare.Settings/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/denis/Documents/Programming/nbfc/Core/StagWare.Settings/bin/Release/StagWare.Settings.pdb
+/home/denis/Documents/Programming/nbfc/Core/StagWare.Settings/bin/Release/StagWare.Settings.dll
+/home/denis/Documents/Programming/nbfc/Core/StagWare.Settings/obj/Release/StagWare.Settings.dll
+/home/denis/Documents/Programming/nbfc/Core/StagWare.Settings/obj/Release/StagWare.Settings.pdb

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+     xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
+
+  <!--Includes-->
+  <?include $(var.ProjectDir)Constants.wxi ?>
+
+  <Fragment>
+    <ComponentGroup Id="Application" Directory="INSTALLFOLDER">
+      <Component Id="App.NbfcService" Guid="A178E4FC-45EF-4246-B946-EC6CC879A26C">
+        
+        <File Id="NbfcService.exe" 
+              Name="NbfcService.exe" 
+              DiskId="1" 
+              Vital="yes" 
+              KeyPath="yes"
+              Source="$(var.NbfcService.TargetDir)NbfcService.exe">
+
+          <?if $(var.Configuration) = "Release"?>
+          <netfx:NativeImage Id="NbfcService.NativeImage" Platform="all"/>
+          <?endif?>
+        </File>
+
+        <ServiceInstall Id="NbfcService.Installer" 
+                        Type="ownProcess" 
+                        Vital="yes" 
+                        Name="NbfcService" 
+                        Start="auto"
+                        Account="LocalSystem" 
+                        ErrorControl="ignore" 
+                        Interactive="no"
+                        DisplayName="NoteBook FanControl Service"
+                        Description="Allows to control the fans on various notebook models via user defined configuration files.">
+          
+          <util:ServiceConfig FirstFailureActionType="restart"
+                              SecondFailureActionType="restart"
+                              ThirdFailureActionType="restart"/>
+        </ServiceInstall>        
+        <ServiceControl Id="StartService" 
+                        Start="install" 
+                        Stop="both" 
+                        Remove="uninstall" 
+                        Name="NbfcService" 
+                        Wait="yes" />
+      </Component>
+
+      <Component Id="App.NbfcServiceConfig" Guid="ED567D74-C19E-40B7-B984-54D720B7BB17">
+        <File Id="NbfcService.exe.config" 
+              Name="NbfcService.exe.config" 
+              DiskId="1" Vital="yes" 
+              KeyPath="yes"
+              Source="$(var.NbfcService.TargetDir)NbfcService.exe.config"/>
+      </Component>
+
+      <Component Id="App.StagWare.FanControl.Service" Guid="0300428D-8A7C-4EB5-A7DB-88F48C265E0B">
+        <File Id="StagWare.FanControl.Service.dll" 
+              Name="StagWare.FanControl.Service.dll" 
+              DiskId="1" 
+              Vital="yes" 
+              KeyPath="yes"
+              Source="$(var.StagWare.FanControl.Service.TargetDir)StagWare.FanControl.Service.dll"/>
+      </Component>
+
+      <Component Id="App.StagWare.FanControl" Guid="5ED83797-32AC-4B22-BED0-40CC7D3E868F">
+        <File Id="StagWare.FanControl.dll" 
+              Name="StagWare.FanControl.dll" 
+              DiskId="1" 
+              Vital="yes" 
+              KeyPath="yes"
+              Source="$(var.StagWare.FanControl.TargetDir)StagWare.FanControl.dll"/>
+      </Component>
+
+      <Component Id="App.StagWare.FanControl.Configurations" Guid="19CC0856-0909-49B2-A708-15FA70891049">
+        <File Id="StagWare.FanControl.Configurations.dll" 
+              Name="StagWare.FanControl.Configurations.dll" 
+              DiskId="1" 
+              Vital="yes" 
+              KeyPath="yes"
+              Source="$(var.StagWare.FanControl.Configurations.TargetDir)StagWare.FanControl.Configurations.dll"/>
+      </Component>
+      
+      <Component Id="App.System.IO.Abstractions" Guid="7DB74C9F-53C3-4A99-91B8-B85BB4A47D38">
+        <File Id="System.IO.Abstractions.dll" 
+              Name="System.IO.Abstractions.dll" 
+              DiskId="1" 
+              Vital="yes" 
+              KeyPath="yes"
+              Source="$(var.StagWare.FanControl.Configurations.TargetDir)System.IO.Abstractions.dll"/>
+      </Component>
+
+      <Component Id="App.StagWare.BiosInfo" Guid="56FD647A-734A-49E5-86CD-745BDA7804E1">
+        <File Id="StagWare.BiosInfo.dll" 
+              Name="StagWare.BiosInfo.dll" 
+              DiskId="1" 
+              Vital="yes" 
+              KeyPath="yes"
+              Source="$(var.StagWare.BiosInfo.TargetDir)StagWare.BiosInfo.dll"/>
+      </Component>
+
+      <Component Id="App.StagWare.Settings" Guid="44EA1296-53F1-45C7-843F-C3DCBE04921C">
+        <File Id="StagWare.Settings.dll"
+              Name="StagWare.Settings.dll"
+              DiskId="1"
+              Vital="yes"
+              KeyPath="yes"
+              Source="$(var.StagWare.Settings.TargetDir)StagWare.Settings.dll"/>
+      </Component>
+      
+      <Component Id="App.NbfcProbe" Guid="96351E80-C0DD-4845-BAC5-065EA49114BC">
+        <File Id="ec_probe.exe"
+              Name="ec-probe.exe"
+              DiskId="1"
+              Vital="yes"
+              KeyPath="yes"
+              Source="$(var.NbfcProbe.TargetDir)ec-probe.exe">
+
+          <?if $(var.Configuration) = "Release"?>
+          <netfx:NativeImage Id="NbfcProbe.NativeImage" Platform="all" />
+          <?endif?>
+        </File>
+      </Component>
+
+      <Component Id="App.NbfcCli" Guid="80CB8B42-92D4-4BAE-A58C-690E14AEF4AA">
+        <File Id="nbfc.exe"
+              Name="nbfc.exe"
+              DiskId="1"
+              Vital="yes"
+              KeyPath="yes"
+              Source="$(var.NbfcCli.TargetDir)nbfc.exe">
+
+          <?if $(var.Configuration) = "Release"?>
+          <netfx:NativeImage Id="NbfcCli.NativeImage" Platform="all" />
+          <?endif?>
+        </File>
+      </Component>
+
+      <Component Id="App.clipr" Guid="3B8127A0-5155-4919-8BEE-AE0608C15934">
+        <File Id="clipr.dll"
+              Name="clipr.dll"
+              DiskId="1"
+              Vital="yes"
+              KeyPath="yes"
+              Source="$(var.NbfcCli.TargetDir)clipr.dll">
+        </File>
+      </Component>
+      
+      <Component Id="App.NbfcCliConfig" Guid="D0495CB2-1555-43FC-BCFF-3A5C4F732BEE">
+        <File Id="nbfc.exe.config" 
+              Name="nbfc.exe.config" 
+              DiskId="1" 
+              Vital="yes" 
+              KeyPath="yes"
+              Source="$(var.NbfcCli.TargetDir)nbfc.exe.config"/>
+      </Component>
+
+      <Component Id="App.NbfcClient" Guid="6CD59558-48F7-4E1E-B4F6-470F8510D57A">
+        <File Id="NoteBookFanControl.exe" 
+              Name="NoteBookFanControl.exe" 
+              DiskId="1" 
+              Vital="yes" 
+              KeyPath="yes"
+              Source="$(var.NbfcClient.TargetDir)NoteBookFanControl.exe">
+          <Shortcut Id="NbfcClientStartMenuShortcut" 
+                    Directory="ProgramMenuProductFolder" 
+                    Name="$(var.ProductName)"
+                    Icon="fan.ico" 
+                    Advertise="yes" />
+
+          <?if $(var.Configuration) = "Release"?>
+          <netfx:NativeImage Id="NbfcClient.NativeImage" Platform="all" />
+          <?endif?>
+        </File>
+      </Component>
+
+      <Component Id="App.NbfcClientConfig" Guid="3EAE4C2F-E19A-466E-901C-72769E50E37C">
+        <File Id="NoteBookFanControl.exe.config" 
+              Name="NoteBookFanControl.exe.config" 
+              DiskId="1" 
+              Vital="yes" 
+              KeyPath="yes"
+              Source="$(var.NbfcClient.TargetDir)NoteBookFanControl.exe.config"/>
+      </Component>
+      
+      <Component Id="App.GalaSoft.MvvmLight" Guid="254A718B-73A7-470B-A519-6DF09A7CCE7E">
+        <File Id="GalaSoft.MvvmLight.dll" 
+              Name="GalaSoft.MvvmLight.dll" 
+              DiskId="1" 
+              Vital="yes" 
+              KeyPath="yes"
+              Source="$(var.NbfcClient.TargetDir)GalaSoft.MvvmLight.dll"/>
+      </Component>
+      
+      <Component Id="App.GalaSoft.MvvmLight.Extras" Guid="07882C6A-5704-4C05-8FA4-60B31636D331">
+        <File Id="GalaSoft.MvvmLight.Extras.dll" 
+              Name="GalaSoft.MvvmLight.Extras.dll" 
+              DiskId="1" 
+              Vital="yes" 
+              KeyPath="yes"
+              Source="$(var.NbfcClient.TargetDir)GalaSoft.MvvmLight.Extras.dll"/>
+      </Component>
+      
+      <Component Id="App.GalaSoft.MvvmLight.Platform" Guid="{66F5434D-64B8-40B0-9348-5315CF7607C0}">
+        <File Id="GalaSoft.MvvmLight.Platform.dll" 
+              Name="GalaSoft.MvvmLight.Platform.dll" 
+              DiskId="1" 
+              Vital="yes" 
+              KeyPath="yes"
+              Source="$(var.NbfcClient.TargetDir)GalaSoft.MvvmLight.Platform.dll"/>
+      </Component>
+      
+      <Component Id="App.CommonServiceLocator" Guid="{D2258B3C-577D-4759-9076-96477D71F74D}">
+        <File Id="CommonServiceLocator.dll" 
+              Name="CommonServiceLocator.dll" 
+              DiskId="1" 
+              Vital="yes" 
+              KeyPath="yes"
+              Source="$(var.NbfcClient.TargetDir)CommonServiceLocator.dll"/>
+      </Component>
+        
+      
+      <Component Id="App.System.Windows.Interactivity" Guid="DE046D6D-6981-4680-91F9-A099261FC1EA">
+        <File Id="System.Windows.Interactivity.dll" 
+              Name="System.Windows.Interactivity.dll" 
+              DiskId="1" 
+              Vital="yes" 
+              KeyPath="yes"
+              Source="$(var.NbfcClient.TargetDir)System.Windows.Interactivity.dll"/>
+      </Component>
+
+      <Component Id="App.Hardcodet.Wpf.TaskbarNotification" Guid="076A2E94-119E-4EF7-8131-4C174E90F3BE">
+        <File Id="Hardcodet.Wpf.TaskbarNotification.dll" 
+              Name="Hardcodet.Wpf.TaskbarNotification.dll" 
+              DiskId="1" 
+              Vital="yes" 
+              KeyPath="yes"
+              Source="$(var.NbfcClient.TargetDir)Hardcodet.Wpf.TaskbarNotification.dll"/>
+      </Component>
+
+      <Component Id="App.NLog" Guid="D2CF95AB-9859-4432-86D5-89FF9E64D970">
+        <File Id="NLog.dll"
+              Name="NLog.dll"
+              DiskId="1"
+              Vital="yes"
+              KeyPath="yes"
+              Source="$(var.NbfcClient.TargetDir)NLog.dll"/>
+      </Component>
+
+      <Component Id="App.ConfigEditor" Guid="C3D8D023-75AB-49F5-B276-75E80FA87DBF">
+        <File Id="ConfigEditor.exe" 
+              Name="ConfigEditor.exe" 
+              DiskId="1" 
+              Vital="yes" 
+              KeyPath="yes"
+              Source="$(var.ConfigEditor.TargetDir)ConfigEditor.exe">
+          <Shortcut Id="ConfigEditorStartMenuShortcut" 
+                    Directory="ProgramMenuProductFolder" 
+                    Name="Config Editor"
+                    Icon="fan.ico" 
+                    Advertise="yes" />
+
+          <?if $(var.Configuration) = "Release"?>
+          <netfx:NativeImage Id="ConfigEditor.NativeImage" Platform="all"/>
+          <?endif?>
+        </File>
+      </Component>
+
+      <Component Id="App.Xceed.Wpf.Toolkit" Guid="40C4D054-AD1F-40B7-9A0E-1E73AE026CA4">
+        <File Id="Xceed.Wpf.Toolkit.dll" 
+              Name="Xceed.Wpf.Toolkit.dll" 
+              DiskId="1" 
+              Vital="yes" 
+              KeyPath="yes"
+              Source="$(var.ConfigEditor.TargetDir)Xceed.Wpf.Toolkit.dll"/>
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

@@ -1,0 +1,17 @@
+/home/denis/Documents/Programming/nbfc/Core/NbfcProbe/obj/ReleaseLinux/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/denis/Documents/Programming/nbfc/Core/NbfcProbe/bin/Release/ec-probe.exe.config
+/home/denis/Documents/Programming/nbfc/Core/NbfcProbe/bin/Release/ec-probe.pdb
+/home/denis/Documents/Programming/nbfc/Core/NbfcProbe/bin/Release/ec-probe.exe
+/home/denis/Documents/Programming/nbfc/Core/NbfcProbe/obj/ReleaseLinux/ec-probe.exe
+/home/denis/Documents/Programming/nbfc/Core/NbfcProbe/obj/ReleaseLinux/ec-probe.pdb
+/home/denis/Documents/Programming/nbfc/Core/NbfcProbe/bin/Release/clipr.dll
+/home/denis/Documents/Programming/nbfc/Core/NbfcProbe/bin/Release/nbfc.exe
+/home/denis/Documents/Programming/nbfc/Core/NbfcProbe/bin/Release/nbfc.pdb
+/home/denis/Documents/Programming/nbfc/Core/NbfcProbe/bin/Release/StagWare.FanControl.dll
+/home/denis/Documents/Programming/nbfc/Core/NbfcProbe/bin/Release/StagWare.FanControl.pdb
+/home/denis/Documents/Programming/nbfc/Core/NbfcProbe/bin/Release/NLog.dll
+/home/denis/Documents/Programming/nbfc/Core/NbfcProbe/bin/Release/StagWare.FanControl.Configurations.dll
+/home/denis/Documents/Programming/nbfc/Core/NbfcProbe/bin/Release/StagWare.FanControl.Configurations.pdb
+/home/denis/Documents/Programming/nbfc/Core/NbfcProbe/bin/Release/System.IO.Abstractions.dll
+/home/denis/Documents/Programming/nbfc/Core/NbfcProbe/bin/Release/StagWare.BiosInfo.dll
+/home/denis/Documents/Programming/nbfc/Core/NbfcProbe/bin/Release/StagWare.BiosInfo.pdb

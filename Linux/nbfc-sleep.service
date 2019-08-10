@@ -1,0 +1,13 @@
+[Unit]
+Description=NoteBook FanControl service sleep hook
+Before=sleep.target
+StopWhenUnneeded=yes
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=-/opt/nbfc/nbfcservice.sh pause
+ExecStop=-/opt/nbfc/nbfcservice.sh continue
+
+[Install]
+WantedBy=sleep.target 

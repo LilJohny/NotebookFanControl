@@ -1,0 +1,15 @@
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.ECLinux/obj/ReleaseLinux/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.ECLinux/bin/Release/StagWare.Plugins.ECLinux.pdb
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.ECLinux/bin/Release/StagWare.Plugins.ECLinux.dll
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.ECLinux/obj/ReleaseLinux/StagWare.Plugins.ECLinux.dll
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.ECLinux/obj/ReleaseLinux/StagWare.Plugins.ECLinux.pdb
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.ECLinux/bin/Release/StagWare.FanControl.dll
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.ECLinux/bin/Release/StagWare.FanControl.pdb
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.ECLinux/bin/Release/StagWare.Hardware.LPC.dll
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.ECLinux/bin/Release/StagWare.Hardware.LPC.pdb
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.ECLinux/bin/Release/NLog.dll
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.ECLinux/bin/Release/StagWare.FanControl.Configurations.dll
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.ECLinux/bin/Release/StagWare.FanControl.Configurations.pdb
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.ECLinux/bin/Release/System.IO.Abstractions.dll
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.ECLinux/bin/Release/StagWare.BiosInfo.dll
+/home/denis/Documents/Programming/nbfc/Core/Plugins/StagWare.Plugins.ECLinux/bin/Release/StagWare.BiosInfo.pdb

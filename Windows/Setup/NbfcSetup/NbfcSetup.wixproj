@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>3.7</ProductVersion>
+    <ProjectGuid>d709446b-7dec-4f18-b2a2-638a2ef8aaa6</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>NbfcSetup</OutputName>
+    <OutputType>Package</OutputType>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>Debug;ConfigsDir=..\..\..\Configs</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>ConfigsDir=..\..\..\Configs</DefineConstants>
+    <SuppressIces>
+    </SuppressIces>
+    <SuppressValidation>False</SuppressValidation>
+    <WixVariables>
+    </WixVariables>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DefineConstants>Debug;ConfigsDir=..\..\..\Configs</DefineConstants>
+    <OutputPath>bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <DefineConstants>Debug;ConfigsDir=..\..\..\Configs</DefineConstants>
+    <OutputPath>bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Application.wxs" />
+    <Compile Include="Configs.wxs" />
+    <Compile Include="Directories.wxs" />
+    <Compile Include="Plugins.wxs" />
+    <Compile Include="Product.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\NbfcCli\NbfcCli.csproj">
+      <Name>NbfcCli</Name>
+      <Project>{60a11809-e19b-46a2-8e91-bf6ada47bbc6}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\NbfcProbe\NbfcProbe.csproj">
+      <Name>NbfcProbe</Name>
+      <Project>{f6104868-81a7-4d09-8ad2-8cf261d58319}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\NbfcService\NbfcService.csproj">
+      <Name>NbfcService</Name>
+      <Project>{820abb59-7f86-4d7f-89c9-8f7da013d992}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Plugins\OpenHardwareMonitor\OpenHardwareMonitorLib.csproj">
+      <Name>OpenHardwareMonitorLib</Name>
+      <Project>{b0397530-545a-471d-bb74-027ae456df1a}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Plugins\StagWare.Hardware.LPC\StagWare.Hardware.LPC.csproj">
+      <Name>StagWare.Hardware.LPC</Name>
+      <Project>{1d5d7c81-802f-46e0-913f-8519f157bc3c}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Plugins\StagWare.Hardware\StagWare.Hardware.csproj">
+      <Name>StagWare.Hardware</Name>
+      <Project>{66bae497-003d-4f8a-b26e-de5fa3361d38}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Plugins\StagWare.Plugins.CpuTemperatureMonitor\StagWare.Plugins.CpuTemperatureMonitor.csproj">
+      <Name>StagWare.Plugins.CpuTemperatureMonitor</Name>
+      <Project>{281a8541-1845-44df-bbb9-3e0934c753a3}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Plugins\StagWare.Plugins.ECWindows\StagWare.Plugins.ECWindows.csproj">
+      <Name>StagWare.Plugins.ECWindows</Name>
+      <Project>{6c6f4e15-fc36-4298-a7e9-83cd854bdfdb}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\StagWare.BiosInfo\StagWare.BiosInfo.csproj">
+      <Name>StagWare.BiosInfo</Name>
+      <Project>{b45bbd0f-9345-4ec8-b70d-8369659da3b4}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\StagWare.Configurations\StagWare.FanControl.Configurations.csproj">
+      <Name>StagWare.FanControl.Configurations</Name>
+      <Project>{eb60ffbc-51f9-42f7-b22b-2200c3f0cb64}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\StagWare.FanControl.Service\StagWare.FanControl.Service.csproj">
+      <Name>StagWare.FanControl.Service</Name>
+      <Project>{15b3e0d2-6217-493a-a690-158c497f5318}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\StagWare.FanControl\StagWare.FanControl.csproj">
+      <Name>StagWare.FanControl</Name>
+      <Project>{12084b38-c1a2-414c-80a7-b8d02d6f5b84}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\StagWare.Settings\StagWare.Settings.csproj">
+      <Name>StagWare.Settings</Name>
+      <Project>{44c3959a-3565-4fb6-9bf6-694b146cd032}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ConfigEditor\ConfigEditor.csproj">
+      <Name>ConfigEditor</Name>
+      <Project>{a2e2e628-7bda-4072-83de-b28de7ea85a9}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NbfcClient\NbfcClient.csproj">
+      <Name>NbfcClient</Name>
+      <Project>{df818d02-6fbc-44e1-88fa-0d62bd73ca95}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\DriverSetupWixAction\DriverSetupWixAction.csproj">
+      <Name>DriverSetupWixAction</Name>
+      <Project>{98ee4668-8f55-43b7-b2f9-a8c4b0dafa79}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WixExtension Include="WixUtilExtension">
+      <HintPath>$(WixExtDir)\WixUtilExtension.dll</HintPath>
+      <Name>WixUtilExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixUIExtension">
+      <HintPath>$(WixExtDir)\WixUIExtension.dll</HintPath>
+      <Name>WixUIExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixNetFxExtension">
+      <HintPath>$(WixExtDir)\WixNetFxExtension.dll</HintPath>
+      <Name>WixNetFxExtension</Name>
+    </WixExtension>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Constants.wxi" />
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" />
+  <Target Name="BeforeBuild">
+    <HeatDirectory Directory="..\..\..\Configs" AutogenerateGuids="true" DirectoryRefId="ConfigsFolder" SuppressRootDirectory="true" ComponentGroupName="Configs" PreprocessorVariable="var.ConfigsDir" OutputFile="$(ProjectDir)Configs.wxs" ToolPath="$(WixToolPath)" />
+  </Target>
+  <!--
+  <PropertyGroup>
+    <PreBuildEvent>"C:\Program Files (x86)\WiX Toolset v3.9\bin\heat.exe" dir "D:\Users\Stefan\Skydrive\Öffentlich\NBFC\Configs" -ag -dr ConfigsFolder -srd -cg Configs -var var.ConfigsDir -out "$(ProjectDir)Configs.wxs"</PreBuildEvent>
+  </PropertyGroup>
+  -->
+  <!--
+	To modify your build process, add your task inside one of the targets below and uncomment it.
+	Other similar extension points exist, see Wix.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>
